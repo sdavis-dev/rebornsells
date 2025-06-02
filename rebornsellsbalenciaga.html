@@ -40,6 +40,31 @@
     </ul>
   </nav>
 
+  <!-- Product 1 -->
+  <div class="product-card space-y-2">
+  <button onclick="toggleCard(this)" class="bg-white w-full p-4 shadow rounded text-left">
+    <h2 class="text-lg font-semibold">Air Jordan 1 - UNC Reimagined</h2>
+    <p class="text-gray-600">$190</p>
+  </button>
+
+  <div class="hidden expandable-details p-4 bg-gray-100 rounded">
+    <div class="relative w-full h-60 mb-2 overflow-hidden flex items-center justify-center">
+      <div class="carousel relative w-full h-full">
+        <img src="1s.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-100 transition-opacity duration-500" />
+        <img src="1s Front.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-500" />
+        <img src="1s Front 2.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-500" />
+        <img src="1s Box.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-500" />
+        <img src="1s Back.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-500" />
+        <img src="1s Tongue.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-500" />
+        <button onclick="prevImage(this)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white p-1 rounded shadow">⟨</button>
+        <button onclick="nextImage(this)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white p-1 rounded shadow">⟩</button>
+      </div>
+    </div>
+
+    <button onclick="addToCart('Product Name', 19.99)" class="block mx-auto bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add to Cart</button>
+  </div>
+</div>
+
   <!-- Footer -->
   <footer class="bg-white border-t text-center py-6">
     <div class="flex justify-center space-x-6 mb-4">
