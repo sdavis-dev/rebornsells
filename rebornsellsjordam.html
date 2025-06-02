@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shoes</title>
+  <link rel="stylesheet" href="rebornsells.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+    /* Hide scrollbar on sidebar */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow px-6 py-4 flex justify-between items-center">
+    <a href="rebornsells.html"><img src="rebornsell.png" class="logo"></a>
+    <ul class="flex space-x-6 items-center">
+        <li class="relative">
+            <button id="shop-toggle" class="hover:text-blue-500 focus:outline-none">
+              Shop ▾
+            </button>
+            <ul id="shop-menu" class="absolute hidden bg-white shadow-lg mt-2 py-2 rounded w-40 z-10">
+              <li><a href="rebornsellsjordam.html" class="block px-4 py-2 hover:bg-gray-100">Jordan</a></li>
+              <li><a href="rebornsellssbdunks.html" class="block px-4 py-2 hover:bg-gray-100">SB Dunks</a></li>
+              <li><a href="rebornsellslanvin.html" class="block px-4 py-2 hover:bg-gray-100">Lanvin</a></li>
+              <li><a href="rebornsellsbalenciaga.html" class="block px-4 py-2 hover:bg-gray-100">Balenciaga</a></li>
+            </ul>
+          </li>               
+      <li><a href="rebornsellscontact.html" class="hover:text-blue-500">Contact</a></li>
+      <li>
+        <button id="open-cart" class="hover:text-blue-500">🛒 Cart (<span id="cart-count">0</span>)</button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Product Grid -->
+<section class="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+  <!-- Product 1 -->
+  <div class="product-card space-y-2">
+  <button onclick="toggleCard(this)" class="bg-white w-full p-4 shadow rounded text-left">
+    <h2 class="text-lg font-semibold">Air Jordan 1 - UNC Reimagined</h2>
+    <p class="text-gray-600">$190</p>
+  </button>
+
+  <div class="hidden expandable-details p-4 bg-gray-100 rounded">
+    <div class="relative w-full h-60 mb-2 overflow-hidden flex items-center justify-center">
+      <div class="carousel relative w-full h-full">
+        <img src="1s.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-100 transition-opacity duration-500" />
+        <img src="1s Front.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-500" />
+        <img src="1s Front 2.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-500" />
+        <img src="1s Box.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-500" />
+        <img src="1s Back.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-500" />
+        <img src="1s Tongue.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-500" />
+        <button onclick="prevImage(this)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white p-1 rounded shadow">⟨</button>
+        <button onclick="nextImage(this)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white p-1 rounded shadow">⟩</button>
+      </div>
+    </div>
+
+    <button onclick="addToCart('Product Name', 19.99)" class="block mx-auto bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add to Cart</button>
+  </div>
+</div>
+
+
+
+  <!-- Product 2 -->
+  <div class="product-card space-y-2">
+  <button onclick="toggleCard(this)" class="bg-white w-full p-4 shadow rounded text-left">
+    <h2 class="text-lg font-semibold">Air Jordan 1 - 85 Bred</h2>
+    <p class="text-gray-600">$190</p>
+  </button>
+
+  <div class="hidden expandable-details p-4 bg-gray-100 rounded">
+    <div class="relative w-full h-60 mb-2 overflow-hidden flex items-center justify-center">
+      <div class="carousel relative w-full h-full">
+        <img src="bredback.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-100 transition-opacity duration-500" />
+        <img src="bredbox.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-500" />
+        <img src="bredfront.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-500" />
+        <img src="bredfrontfull.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-500" />
+        <img src="bredside.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-500" />
+        <img src="bredtongue.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-500" />
+        <button onclick="prevImage(this)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white p-1 rounded shadow">⟨</button>
+        <button onclick="nextImage(this)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white p-1 rounded shadow">⟩</button>
+      </div>
+    </div>
+
+    <button onclick="addToCart('Product Name', 19.99)" class="block mx-auto bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add to Cart</button>
+  </div>
+</div>
+
+  <!-- Product 3 -->
+  <div class="product-card space-y-2">
+  <button onclick="toggleCard(this)" class="bg-white w-full p-4 shadow rounded text-left">
+    <h2 class="text-lg font-semibold">Air Jordan 1 - Union LA Chicago Shadow</h2>
+    <p class="text-gray-600">$190</p>
+  </button>
+
+  <div class="hidden expandable-details p-4 bg-gray-100 rounded">
+    <div class="relative w-full h-60 mb-2 overflow-hidden flex items-center justify-center">
+      <div class="carousel relative w-full h-full">
+        <img src="shadowback.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-100 transition-opacity duration-500" />
+        <img src="shadowbox.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-500" />
+        <img src="shadowfront.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-500" />
+        <img src="shadowfrontfull.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-500" />
+        <img src="shadowside.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-500" />
+        <img src="shoadowtongue.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-500" />
+        <button onclick="prevImage(this)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white p-1 rounded shadow">⟨</button>
+        <button onclick="nextImage(this)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white p-1 rounded shadow">⟩</button>
+      </div>
+    </div>
+
+    <button onclick="addToCart('Product Name', 19.99)" class="block mx-auto bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add to Cart</button>
+  </div>
+</div>
+
+  <!-- Product 4 -->
+  <div class="product-card space-y-2">
+  <button onclick="toggleCard(this)" class="bg-white w-full p-4 shadow rounded text-left">
+    <h2 class="text-lg font-semibold">Air Jordan 1 Low - Travis Scott Reverse Mocha</h2>
+    <p class="text-gray-600">$190</p>
+  </button>
+
+  <div class="hidden expandable-details p-4 bg-gray-100 rounded">
+    <div class="relative w-full h-60 mb-2 overflow-hidden flex items-center justify-center">
+      <div class="carousel relative w-full h-full">
+        <img src="reversemocha.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-100 transition-opacity duration-500" />
+        <img src="rmochaback.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-500" />
+        <img src="rmochabox.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-500" />
+        <img src="rmochaside.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-500" />
+        <img src="rmochatopside.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-500" />
+        <img src="rmochotherview.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-500" />
+        <button onclick="prevImage(this)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white p-1 rounded shadow">⟨</button>
+        <button onclick="nextImage(this)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white p-1 rounded shadow">⟩</button>
+      </div>
+    </div>
+
+    <button onclick="addToCart('Product Name', 19.99)" class="block mx-auto bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add to Cart</button>
+  </div>
+</div>
+
+  <!-- Product 5 -->
+  <div class="product-card space-y-2">
+  <button onclick="toggleCard(this)" class="bg-white w-full p-4 shadow rounded text-left">
+    <h2 class="text-lg font-semibold">Air Jordan 3 - Lucky Shorts</h2>
+    <p class="text-gray-600">$190</p>
+  </button>
+
+  <div class="hidden expandable-details p-4 bg-gray-100 rounded">
+    <div class="relative w-full h-60 mb-2 overflow-hidden flex items-center justify-center">
+      <div class="carousel relative w-full h-full">
+        <img src="aj3luckyback.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-100 transition-opacity duration-500" />
+        <img src="aj3luckyshorts.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-500" />
+        <img src="aj3luckytop.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-500" />
+        <img src="aj3shortfront.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-500" />
+        <img src="luckyfrontfull.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-500" />
+        <img src="luckyside.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-500" />
+        <button onclick="prevImage(this)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white p-1 rounded shadow">⟨</button>
+        <button onclick="nextImage(this)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white p-1 rounded shadow">⟩</button>
+      </div>
+    </div>
+
+    <button onclick="addToCart('Product Name', 19.99)" class="block mx-auto bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add to Cart</button>
+  </div>
+</div>
+
+    <!-- Product 6 -->
+  <div class="product-card space-y-2">
+  <button onclick="toggleCard(this)" class="bg-white w-full p-4 shadow rounded text-left">
+    <h2 class="text-lg font-semibold">Air Jordan 3 - Black Cat</h2>
+    <p class="text-gray-600">$190</p>
+  </button>
+
+  <div class="hidden expandable-details p-4 bg-gray-100 rounded">
+    <div class="relative w-full h-60 mb-2 overflow-hidden flex items-center justify-center">
+      <div class="carousel relative w-full h-full">
+        <img src="blackcatfront.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-100 transition-opacity duration-500" />
+        <img src="blackcatfrontfull.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-500" />
+        <img src="blackcatsback.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-500" />
+        <img src="blackcatside.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-500" />
+        <img src="blackcatstop.jpg" class="carousel-img w-full h-full object-contain absolute inset-0 opacity-0 transition-opacity duration-500" />
+        <button onclick="prevImage(this)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white p-1 rounded shadow">⟨</button>
+        <button onclick="nextImage(this)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white p-1 rounded shadow">⟩</button>
+      </div>
+    </div>
+
+    <button onclick="addToCart('Product Name', 19.99)" class="block mx-auto bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add to Cart</button>
+  </div>
+</div>
+
+    <!-- Product 7 -->
+  <div class="product-card space-y-2">
+  <button onclick="toggleCard(this)" class="bg-white w-full p-4 shadow rounded text-left">
+    <h2 class="text-lg font-semibold">Product Name</h2>
+    <p class="text-gray-600">$19.99</p>
+  </button>
+
+  <div class="hidden expandable-details p-4 bg-gray-100 rounded">
+    <!-- Image carousel -->
+    <div class="relative w-full h-48 mb-2">
+      <img src="1s.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100 carousel-img" />
+      <img src="1s Front.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <img src="1s Front 2.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <img src="1s Box.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <img src="1s Back.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <img src="1s Tongue.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <button onclick="prevImage(this)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white p-1 rounded">⟨</button>
+      <button onclick="nextImage(this)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white p-1 rounded">⟩</button>
+    </div>
+    <!-- Add to Cart -->
+    <button onclick="addToCart('Product Name', 19.99)" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add to Cart</button>
+  </div>
+</div>
+
+    <!-- Product 8 -->
+  <div class="product-card space-y-2">
+  <button onclick="toggleCard(this)" class="bg-white w-full p-4 shadow rounded text-left">
+    <h2 class="text-lg font-semibold">Product Name</h2>
+    <p class="text-gray-600">$19.99</p>
+  </button>
+
+  <div class="hidden expandable-details p-4 bg-gray-100 rounded">
+    <!-- Image carousel -->
+    <div class="relative w-full h-48 mb-2">
+      <img src="1s.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100 carousel-img" />
+      <img src="1s Front.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <img src="1s Front 2.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <img src="1s Box.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <img src="1s Back.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <img src="1s Tongue.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <button onclick="prevImage(this)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white p-1 rounded">⟨</button>
+      <button onclick="nextImage(this)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white p-1 rounded">⟩</button>
+    </div>
+    <!-- Add to Cart -->
+    <button onclick="addToCart('Product Name', 19.99)" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add to Cart</button>
+  </div>
+</div>
+
+    <!-- Product 9 -->
+  <div class="product-card space-y-2">
+  <button onclick="toggleCard(this)" class="bg-white w-full p-4 shadow rounded text-left">
+    <h2 class="text-lg font-semibold">Product Name</h2>
+    <p class="text-gray-600">$19.99</p>
+  </button>
+
+  <div class="hidden expandable-details p-4 bg-gray-100 rounded">
+    <!-- Image carousel -->
+    <div class="relative w-full h-48 mb-2">
+      <img src="1s.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100 carousel-img" />
+      <img src="1s Front.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <img src="1s Front 2.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <img src="1s Box.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <img src="1s Back.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <img src="1s Tongue.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <button onclick="prevImage(this)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white p-1 rounded">⟨</button>
+      <button onclick="nextImage(this)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white p-1 rounded">⟩</button>
+    </div>
+    <!-- Add to Cart -->
+    <button onclick="addToCart('Product Name', 19.99)" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add to Cart</button>
+  </div>
+</div>
+
+    <!-- Product 10 -->
+  <div class="product-card space-y-2">
+  <button onclick="toggleCard(this)" class="bg-white w-full p-4 shadow rounded text-left">
+    <h2 class="text-lg font-semibold">Product Name</h2>
+    <p class="text-gray-600">$19.99</p>
+  </button>
+
+  <div class="hidden expandable-details p-4 bg-gray-100 rounded">
+    <!-- Image carousel -->
+    <div class="relative w-full h-48 mb-2">
+      <img src="1s.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100 carousel-img" />
+      <img src="1s Front.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <img src="1s Front 2.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <img src="1s Box.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <img src="1s Back.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <img src="1s Tongue.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <button onclick="prevImage(this)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white p-1 rounded">⟨</button>
+      <button onclick="nextImage(this)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white p-1 rounded">⟩</button>
+    </div>
+    <!-- Add to Cart -->
+    <button onclick="addToCart('Product Name', 19.99)" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add to Cart</button>
+  </div>
+</div>
+
+    <!-- Product 11 -->
+  <div class="product-card space-y-2">
+  <button onclick="toggleCard(this)" class="bg-white w-full p-4 shadow rounded text-left">
+    <h2 class="text-lg font-semibold">Product Name</h2>
+    <p class="text-gray-600">$19.99</p>
+  </button>
+
+  <div class="hidden expandable-details p-4 bg-gray-100 rounded">
+    <!-- Image carousel -->
+    <div class="relative w-full h-48 mb-2">
+      <img src="1s.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100 carousel-img" />
+      <img src="1s Front.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <img src="1s Front 2.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <img src="1s Box.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <img src="1s Back.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <img src="1s Tongue.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <button onclick="prevImage(this)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white p-1 rounded">⟨</button>
+      <button onclick="nextImage(this)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white p-1 rounded">⟩</button>
+    </div>
+    <!-- Add to Cart -->
+    <button onclick="addToCart('Product Name', 19.99)" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add to Cart</button>
+  </div>
+</div>
+
+    <!-- Product 12 -->
+  <div class="product-card space-y-2">
+  <button onclick="toggleCard(this)" class="bg-white w-full p-4 shadow rounded text-left">
+    <h2 class="text-lg font-semibold">Product Name</h2>
+    <p class="text-gray-600">$19.99</p>
+  </button>
+
+  <div class="hidden expandable-details p-4 bg-gray-100 rounded">
+    <!-- Image carousel -->
+    <div class="relative w-full h-48 mb-2">
+      <img src="1s.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100 carousel-img" />
+      <img src="1s Front.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <img src="1s Front 2.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <img src="1s Box.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <img src="1s Back.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <img src="1s Tongue.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <button onclick="prevImage(this)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white p-1 rounded">⟨</button>
+      <button onclick="nextImage(this)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white p-1 rounded">⟩</button>
+    </div>
+    <!-- Add to Cart -->
+    <button onclick="addToCart('Product Name', 19.99)" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add to Cart</button>
+  </div>
+</div>
+
+    <!-- Product 13 -->
+  <div class="product-card space-y-2">
+  <button onclick="toggleCard(this)" class="bg-white w-full p-4 shadow rounded text-left">
+    <h2 class="text-lg font-semibold">Product Name</h2>
+    <p class="text-gray-600">$19.99</p>
+  </button>
+
+  <div class="hidden expandable-details p-4 bg-gray-100 rounded">
+    <!-- Image carousel -->
+    <div class="relative w-full h-48 mb-2">
+      <img src="1s.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100 carousel-img" />
+      <img src="1s Front.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <img src="1s Front 2.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <img src="1s Box.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <img src="1s Back.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <img src="1s Tongue.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <button onclick="prevImage(this)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white p-1 rounded">⟨</button>
+      <button onclick="nextImage(this)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white p-1 rounded">⟩</button>
+    </div>
+    <!-- Add to Cart -->
+    <button onclick="addToCart('Product Name', 19.99)" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add to Cart</button>
+  </div>
+</div>
+
+    <!-- Product 14 -->
+  <div class="product-card space-y-2">
+  <button onclick="toggleCard(this)" class="bg-white w-full p-4 shadow rounded text-left">
+    <h2 class="text-lg font-semibold">Product Name</h2>
+    <p class="text-gray-600">$19.99</p>
+  </button>
+
+  <div class="hidden expandable-details p-4 bg-gray-100 rounded">
+    <!-- Image carousel -->
+    <div class="relative w-full h-48 mb-2">
+      <img src="1s.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100 carousel-img" />
+      <img src="1s Front.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <img src="1s Front 2.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <img src="1s Box.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <img src="1s Back.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <img src="1s Tongue.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <button onclick="prevImage(this)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white p-1 rounded">⟨</button>
+      <button onclick="nextImage(this)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white p-1 rounded">⟩</button>
+    </div>
+    <!-- Add to Cart -->
+    <button onclick="addToCart('Product Name', 19.99)" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add to Cart</button>
+  </div>
+</div>
+
+    <!-- Product 15 -->
+  <div class="product-card space-y-2">
+  <button onclick="toggleCard(this)" class="bg-white w-full p-4 shadow rounded text-left">
+    <h2 class="text-lg font-semibold">Product Name</h2>
+    <p class="text-gray-600">$19.99</p>
+  </button>
+
+  <div class="hidden expandable-details p-4 bg-gray-100 rounded">
+    <!-- Image carousel -->
+    <div class="relative w-full h-48 mb-2">
+      <img src="1s.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100 carousel-img" />
+      <img src="1s Front.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <img src="1s Front 2.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <img src="1s Box.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <img src="1s Back.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <img src="1s Tongue.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 carousel-img" />
+      <button onclick="prevImage(this)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white p-1 rounded">⟨</button>
+      <button onclick="nextImage(this)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white p-1 rounded">⟩</button>
+    </div>
+    <!-- Add to Cart -->
+    <button onclick="addToCart('Product Name', 19.99)" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add to Cart</button>
+  </div>
+</div>
+
+</section>
+
+  <script src="rebornsells.js"></script>
+</body>
+</html>
